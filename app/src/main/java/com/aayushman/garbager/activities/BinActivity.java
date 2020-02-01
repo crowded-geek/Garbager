@@ -31,6 +31,7 @@ public class BinActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bin);
         getSupportActionBar().hide();
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        pd = new ProgressDialog(this);
         in = findViewById(R.id.put_tv);
         in.setOnClickListener(new View.OnClickListener() {
             @Override

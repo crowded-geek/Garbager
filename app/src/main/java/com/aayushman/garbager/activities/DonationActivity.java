@@ -39,6 +39,7 @@ public class DonationActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         transactions = new ArrayList<>();
+        pd = new ProgressDialog(this);
         tFunds = findViewById(R.id.tv_funds);
         donate = findViewById(R.id.donate_fab);
         pd.show();
@@ -78,7 +79,7 @@ public class DonationActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 tFunds.setText("Rs. "+  dataSnapshot.child("totalfunds").getValue().toString());
                 for(DataSnapshot d : dataSnapshot.child("transactions").getChildren()){
-                    pd.show();
+                    pd.hide();
                     if(Boolean.parseBoolean(d.child("received").getValue().toString())){
                     Transaction transaction = new Transaction(
                             d.child("name").getValue().toString(),
