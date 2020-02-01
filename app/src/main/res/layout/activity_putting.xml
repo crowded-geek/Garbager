@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="22dp"
+            app:contentPaddingBottom="8dp"
+            app:contentPaddingLeft="14dp"
+            app:contentPaddingRight="14dp"
+            app:contentPaddingTop="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="180"
+                android:backgroundTint="@color/colorPrimary"
+                android:src="@drawable/ic_arrow_forward_green"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="22dp"
+            app:contentPaddingBottom="8dp"
+            app:contentPaddingLeft="14dp"
+            app:contentPaddingRight="14dp"
+            app:contentPaddingTop="8dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Put"
+                android:textColor="@color/colorPrimary"
+                android:textSize="38sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/timeAddHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="22dp"
+            app:contentPadding="8dp">
+
+
+            <TextView
+                android:id="@+id/timeStamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="22:25"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dateAddHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="22dp"
+        app:contentPadding="8dp">
+
+
+        <TextView
+            android:id="@+id/dateStamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="16/5/2019"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/myLocAddHolder"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:elevation="22dp"
+        android:src="@drawable/ic_check_black_24dp"
+        app:fabSize="normal" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myLocAddHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="40dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="22dp"
+        app:contentPadding="8dp">
+
+
+        <TextView
+            android:id="@+id/myLocAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="Your Location"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
